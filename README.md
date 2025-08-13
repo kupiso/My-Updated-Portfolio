@@ -11,4 +11,4 @@ This portfolio was created using the following :
 - *React*: For building the user interface as a single-page application.
 - *Git*: For version control and collaboration.
 - *GitHub Pages*: For hosting the portfolio online.
-[https://kupiso.github.io/](https://kupiso-site.netlify.app/)
+[Click Here](https://kupiso-site.netlify.app/)
