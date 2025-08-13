@@ -1,0 +1,901 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+:root {
+	--base: #555;
+	--base-100: #f1f1f1;
+	--base-400: #555;
+	--base-800: #000;
+	--yellow: #ffda4b;
+	--yellow-100: #fffbe6;
+	--yellow-400: #ffda4b;
+	--yellow-800: #8b6f00;
+	--blue: #0a61ae;
+	--blue-100: #e2f8ff;
+	--blue-400: #61dafb;
+	--blue-800: #0a61ae;
+}
+
+body {
+    /* Your existing body styles */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 0px;
+
+    /* Add this new code for the background animation */
+    animation-name: color-change;
+    animation-duration: 9s; /* 3 colors * 3 seconds each = 9s */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: white; /* Starting color */
+    }
+    33% {
+        background-color: var(--blue-100); /* Light blue */
+    }
+    66% {
+        background-color: var(--blue); /* Strong blue */
+    }
+    100% {
+        background-color: white; /* Back to starting color */
+    }
+}
+
+a {
+	text-decoration: none;
+	color: var(--blue);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+header {
+	padding-top:10px;
+	padding-bottom:10px;
+	display:flex;
+	justify-content:space-between;
+	max-width:1440px;
+	margin:auto;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+
+	.logo-holder {
+		display:flex;
+		padding:10px;
+		align-items:center;
+		font-weight:600;
+		color: var(--base-800);
+		
+		.logo {
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			font-size:32px;
+			background-color: var(--base-800);
+			color: var(--base-100);
+			height:64px;
+			width:64px;
+			margin-right:20px;
+			border-radius:50%;
+		}
+		.logo-text {
+			flex:1;
+		}
+	}
+
+	nav {
+		display:flex;
+		align-items:center;
+		ul {
+			display:flex;
+			list-style-type: none;
+			gap:5px;
+			li {
+				display:inline-block;
+				a {
+					display:inline-block;
+					padding:10px 20px;
+					color:var(--base);
+					&:hover {
+						background-color: var(--base-100);
+						border-radius:10px;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+		.mobile-toggle {
+			display:none;
+			color:var(--base-800);
+			padding:10px;
+			@media (max-width:768px){
+				display:inline-block;
+				position:absolute;
+				top:20px;
+				right:20px;
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		flex-direction:column;
+		align-items:center;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction:column;
+		align-items:center;
+		nav {
+			margin-top:10px;
+			width:100%;
+			ul {
+				display:none;
+				flex-direction:column;
+				text-align:center;
+				width:100%;
+				a {
+					width:100%;
+				}
+				&.active {
+					display:flex;
+				}
+			}
+		}
+	}
+}
+
+section {
+	max-width:1440px;
+	margin:auto;
+	gap:30px;
+	margin-top:30px;
+	margin-bottom:30px;
+
+	@media (max-width:1440px){
+		padding-left:30px;
+		padding-right:30px;
+	}
+}
+
+.button {
+	display:inline-block;
+	padding:10px 30px;
+	background-color: var(--blue);
+	color: var(--base-100);
+	border-radius:10px;
+	transition: ease 0.3s all;
+	&:hover {
+		text-decoration:none;
+		background-color: var(--base-800);
+	}
+	&.white {
+		background-color: white;
+		color: var(--base-800);
+		&:hover {
+			background-color: var(--base-100);
+			color: var(--base);
+		}
+	}
+	&.black {
+		background-color: black;
+		color: white;
+		&:hover {
+			background-color: var(--base);
+			color: var(--base-100);
+		}
+	}
+}
+
+h1 {
+	font-size:64px;
+	line-height:1;
+	margin-bottom:10px;
+	small {
+		display:block;
+		font-weight:100;
+	}
+	@media (max-width:1024px){
+		font-size:48px;
+	}
+}
+
+.hero {
+	display:flex;
+	@media (max-width:1024px){
+		flex-direction:column;
+	}
+	.hero-blue {
+		flex:1;
+		background-color: var(--blue-100);
+		border-radius:30px;
+		padding:30px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		span {
+			@media (max-width:768px){
+				display:none;
+			}
+		}
+		.call-to-action {
+			margin-top:20px;
+			margin-bottom:10px;
+			a {
+				margin-right:10px;
+				margin-bottom:10px;
+			}
+		}
+		.social-links {
+			a {
+				&:hover {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.hero-yellow {
+		flex:1;
+		background-color: var(--yellow);
+		border-radius:30px;
+		padding:0px 30px;
+		display:flex;
+		justify-content:center;
+		align-items:flex-end;
+		img {
+			margin-top:-60px;
+			max-width:420px;
+			margin-bottom:-10px;
+		}
+	}
+}
+
+.logos {
+	background-color: var(--base-100);
+	border-radius:30px;
+	padding:30px 0px;
+	@media (max-width:1440px){
+		border-radius:0px;
+	}
+	.marquee {
+		width:100vw;
+		max-width:100%;
+		height:128px;
+		overflow:hidden;
+		position:relative;
+		.track {
+			position:absolute;
+			white-space:nowrap;
+			will-change:transform;
+			animation: marquee 40s linear infinite;
+			display:flex;
+			gap:10px;
+		}
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+h2 {
+	font-size:64px;
+	line-height:1;
+	margin-bottom:10px;
+	text-align:center;
+	color: var(--base-800);
+	padding:30px;
+	small {
+		display:block;
+		font-weight:100;
+		font-size:0.5em;
+		color:var(--base);
+	}
+	@media (max-width:1024px){
+		font-size:48px;
+	}
+}
+
+h3 {
+	font-size:32px;
+	font-weight:600;
+	line-height:1;
+	margin-bottom:20px;
+	color: var(--base-800);
+}
+
+.skills {
+	.holder-blue {
+		background-color: var(--blue-100);
+		border-radius:30px;
+		padding:30px;
+		display:flex;
+		@media(max-width:1024px){
+			flex-direction:column;
+		}
+		.left-column {
+			flex:1;
+			ul {
+				list-style-type: none;
+				gap:10px;
+				margin-right:100px;
+				margin-bottom:20px;
+				li {
+					display:inline-block;
+					background-color: var(--blue-400);
+					padding:10px 20px;
+					border-radius:15px;
+					margin-bottom:10px;
+				}
+			}
+		}
+		.right-column {
+			flex:1;
+			p {
+				margin-bottom:20px;
+			}
+		}
+	}
+}
+
+.work-experience {
+	.jobs {
+		display:flex;
+		gap:30px;
+		@media(max-width:1024px){
+			flex-direction:column;
+		}
+		article {
+			background-color: var(--yellow-100);
+			padding:30px;
+			border-radius:30px;
+			flex:1;
+			h3 {
+				margin-top:20px;
+				margin-bottom:10px;
+			}
+			div {
+				font-weight:600;
+				margin-bottom:5px;
+				color: var(--base-800);
+			}
+			p {
+				margin-bottom:10px;
+			}
+			figure {
+				width:100%;
+				padding-top:56.25%;
+				overflow:hidden;
+				position:relative;
+				border-radius:15px;
+				img {
+					position:absolute;
+					top:0;
+					left:0;
+					height:100%;
+					object-fit:cover;
+					transition: ease 3s all;
+				}
+				figcaption {
+					position:absolute;
+					bottom:0;
+					left:0;
+					right:0;
+					background-color: rgba(0,0,0,0.5);
+					color: var(--base-100);
+					text-align:center;
+					padding:10px;
+					opacity:0;
+					visibility:hidden;
+					transition: ease 0.3s all;
+				}
+
+				&:hover {
+					figcaption {
+						opacity:1;
+						visibility:visible;
+					}
+					img {
+						transform: scale(1.2);
+					}
+				}
+
+			}
+		}
+	}
+}
+
+.bento {
+	.bento-grid {
+		display:grid;
+		grid-gap:30px;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		height:960px;
+		@media(max-width:1024px){
+			grid-template-rows: repeat(8, 1fr);
+		}
+		@media(max-width:768px){
+			display:flex;
+			flex-direction:column;
+			gap:30px;
+			height:auto;
+		}
+		.bento-item {
+			padding:30px;
+			background-color: var(--base-100);
+			border-radius:15px;
+			position:relative;
+			overflow:hidden;
+			img {
+				position:absolute;
+				top:0;
+				left:0;
+				height:100%;
+				object-fit:cover;
+				transition: ease 3s all;
+			}
+			&:hover {
+				img {
+					transform: scale(1.2);
+				}
+			}
+			@media(max-width:768px){
+				height:240px;
+			}
+			&:nth-child(1) {
+				grid-column: span 2;
+				grid-row: span 2;
+				@media(max-width:1024px){
+					grid-column: span 2;
+					grid-row: span 2;
+				}
+			}
+			&:nth-child(2) {
+				grid-column: span 2;
+				grid-row: span 1;
+				@media(max-width:1024px){
+					grid-column: span 3;
+					grid-row: span 2;
+				}
+			}
+			&:nth-child(3) {
+				grid-column: span 1;
+				grid-row: span 1;
+				@media(max-width:1024px){
+					grid-column: span 3;
+					grid-row: span 2;
+				}
+			}
+			&:nth-child(4) {
+				grid-column: span 1;
+				grid-row: span 1;
+				@media(max-width:1024px){
+					grid-column: span 2;
+					grid-row: span 4;
+				}
+			}
+			&:nth-child(5) {
+				grid-column: span 2;
+				grid-row: span 1;
+				@media(max-width:1024px){
+					grid-column: span 3;
+					grid-row: span 2;
+				}
+			}
+			&:nth-child(6) {
+				grid-column: span 5;
+				grid-row: span 3;
+				@media(max-width:1024px){
+					grid-column: span 5;
+					grid-row: span 2;
+				}
+			}
+		}
+	}
+}
+
+.comment-label 
+{
+    display: inline-flex;
+    appearance: none;
+    gap: 10px;
+    text-decoration: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 250ms;
+    user-select: none;
+    position: static;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: none;
+    width: auto;
+    line-height: 1.2;
+    height: 2rem;
+    min-width: 7.5rem;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    background-color: #2c3437;
+    border-radius: .25rem;
+    transition: all 0.4s ease;
+    color: #d3d3d3; /* Light grey color for text */
+    font-weight: bold;
+}
+
+.send-btn
+{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover 
+{
+    background-color: #218838;
+}
+
+textarea 
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form 
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Styling for the entire certificates section */
+.certificates-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container for the grid layout */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 30px; /* Space between grid items */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+}
+
+/* For smaller screens, adjust the grid to 2 columns */
+@media (max-width: 992px) {
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For very small screens, make it a single column */
+@media (max-width: 600px) {
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styling for each certificate card */
+.certificate-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures the border radius is respected */
+}
+
+/* Hover effect on the entire card */
+.certificate-card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the link containing the image */
+.certificate-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* This is the magic for the blue hover overlay */
+.certificate-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0); /* Starts as transparent */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+/* The hover state of the link */
+.certificate-link:hover::before {
+    background-color: rgba(0, 123, 255, 0.2); /* Changes to a light blue overlay */
+}
+
+/* Styling for the certificate images */
+.certificate-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* To make the image scale slightly on hover */
+.certificate-link:hover .certificate-img {
+    transform: scale(1.05);
+}
+
+/* Styling for the text content */
+.certificate-info {
+    padding: 15px;
+    text-align: left;
+}
+
+/* Styling for the bold certificate name */
+.certificate-info strong {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling for the description text */
+.certificate-info p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Chatbot Popup (Fixed at Bottom Right) */
+#chat-container 
+{
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 999;
+}
+
+#close-chat
+{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+#chat-frame 
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+ footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer .social-icons {
+    margin-top: 10px;
+  }
+
+  footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 18px;
+  }
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.social-item {
+    border: 1px solid #ccc;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* Yellow shadow */
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3); /* The yellow shadow effect */
+}
+
+.social-item:hover {
+    /* Blue hover effect */
+    background-color: #e6f7ff; /* A light blue background on hover */
+    border-color: #007bff; /* A darker blue border on hover */
+    transform: translateY(-5px); /* This makes the box "lift up" slightly on hover */
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.5); /* A more intense shadow on hover */
+}
+
+.social-item img {
+    width: 40px;
+    height: auto;
+}
+
+#dynamic-text {
+    /* Optional: Sets a minimum width to prevent layout shifts */
+    min-width: 300px; 
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+    display: inline-block;
+}
+
+/* Create the spin animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Define the spin class that applies the animation */
+.logo.spin-logo {
+    animation: spin 3s linear infinite; /* 3-second duration, continuous spin */
+    transform-origin: center;
+}
+
+/* Define the slower wiggle animation */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Define the new drip animation */
+@keyframes drip {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Create a class to trigger both animations */
+.waving-animation li {
+  position: relative; /* Needed for the pseudo-element positioning */
+  animation: wiggle 5s ease-in-out infinite; /* Slower wiggle over 5 seconds */
+}
+
+/* Style the drip pseudo-element */
+.waving-animation li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--yellow); /* Use your yellow color variable */
+  border-radius: 50%;
+  opacity: 0; /* Starts invisible */
+  animation: drip 1.5s linear infinite;
+  animation-delay: 2s; /* Drips after a delay to match the wiggle */
+}
+
+/* Add staggered delays to the animations for a more natural look */
+.waving-animation li:nth-child(2) { animation-delay: 0.2s; }
+.waving-animation li:nth-child(3) { animation-delay: 0.4s; }
+/* Continue for the rest of your list items... */
+
+/* Stagger the drip animation as well */
+.waving-animation li:nth-child(2)::after { animation-delay: 2.2s; }
+.waving-animation li:nth-child(3)::after { animation-delay: 2.4s; }
+/* Continue for the rest of your list items... */
+
+#contact-section {
+    /* Sets the background image for the article section */
+    background-image: url('/imgs/graduation-hat.png');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact-section::before {
+    /* Creates a semi-transparent blurred overlay over the background image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.5) for transparency */
+    backdrop-filter: blur(5px); /* Adjust the blur intensity */
+    z-index: -1;
+}
+
+/* These styles ensure your content is readable on top of the blurred image */
+#contact-section .box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#contact-section .social-container.box {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+#contact-section .social-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+}
+
+#contact-section form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    width: 100%;
+}

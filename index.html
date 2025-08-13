@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio Web Design</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300,400,500,600,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo-holder">
+			<div class="logo" id="logo-spinner">SK</div>
+			<div class="logo-text">Portfolio Website</div>
+		</a>
+		<nav>
+			<ul id="menu">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#skills">Skills</a>
+				</li>
+				<li>
+					<a href="#work-experience">Work Experience</a>
+				</li>
+				<li>
+					<a href="mailto:kupisosipo@gmail.com" class="button">Contact Me</a>
+				</li>
+			</ul>
+			<a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+				<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+					<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+				</svg>
+			</a>
+		</nav>
+	</header>
+	<main>
+		
+
+<section class="hero container">
+    <div class="hero-blue">
+        <div>
+            <h1>
+                <small>Hi I'm</small>
+                <span id="dynamic-text"></span>
+            </h1>
+            <p>
+                Software Developer Originally from Dutywa, crafting interactive web experiences with HTML, CSS, and JavaScript. 
+                <span>Passionate about AI innovations, integrating tools like ChatGPT to build smarter, user-focused solutions.</span>
+            </p>
+            <div class="call-to-action">
+                <a href="./New_Cv_Updated_Sipo.pdf" class="button black">
+                    View Resume
+                </a>
+                <a href="mailto:kupisosipo@gmail.com" class="button white">
+                    Contact Me
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/kupiso" target="_blank">
+                    <img src="./imgs/github.png" alt="GitHub" width="48" />
+                </a>
+                <a href="https://www.linkedin.com/in/sipo-kupiso-91b035277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="./imgs/linkedin.png" alt="LinkedIn" width="48" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="chat-container">
+        <span id="close-chat">&times;</span>
+        <iframe id="chat-frame"></iframe>
+    </div>
+    <div class="hero-yellow">
+        <img src="./imgs/SK-image.jpeg" alt="Sipo Kupiso" width="88%" height="430" />
+    </div>
+</section>
+		<section class="logos container">
+			<div class="marquee">
+				<div class="track">
+					<img src="./imgs/html.png" alt="HTML" width="128" />
+					<img src="./imgs/css.png" alt="CSS" width="128" />
+					<img src="./imgs/javascript.png" alt="JS" width="128" />
+					<img src="./imgs/sass.png" width="128" alt="Sass" />
+					<img src="./imgs/react.png" width="128" alt="React" />
+					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
+					<img src="./imgs/azure.png" width="128" alt="Azure" />
+					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
+					<img src="./imgs/python.png" width="128" alt="Python" />
+					<img src="./imgs/html.png" alt="HTML" width="128" />
+					<img src="./imgs/css.png" alt="CSS" width="128" />
+					<img src="./imgs/javascript.png" alt="JS" width="128" />
+					<img src="./imgs/sass.png" width="128" alt="Sass" />
+					<img src="./imgs/react.png" width="128" alt="React" />
+					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
+					<img src="./imgs/azure.png" width="128" alt="Azure" />
+					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
+					<img src="./imgs/python.png" width="128" alt="Python" />
+				</div>
+			</div>
+		</section>
+		<section id="skills" class="skills container">
+			<h2>
+				<small>About Me</small>
+				Skills
+			</h2>
+			<div class="holder-blue">
+				<div class="left-column">
+					<h3>Frontend</h3>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>Angular</li>
+						<li>Vue</li>
+					</ul>
+					<h3>Backend</h3>
+					<ul>
+						<li>Node.js</li>
+						<li>Express</li>
+						<li>Python</li>
+						<li>Java</li>
+						<li>PHP</li>
+						<li>Ruby</li>
+					</ul>
+				</div>
+				<div class="right-column">
+					<h3>My Journey</h3>
+					<p>
+                        I’m Sipho Kupiso, a Software Developer skilled in HTML, CSS, and JavaScript, with a growing focus on AI-driven solutions. 
+                        I’m passionate about creating intuitive, user-friendly web experiences that combine functionality with innovation.					
+                    </p>
+					<p>
+                        Currently, I’m building an AI-powered chatbot for web development queries and designing a modern portfolio using React and 
+                        Next.js to showcase my work. Always pushing the boundaries of technology, I strive to deliver seamless, intelligent digital solutions that elevate user experience.					</p>
+				</div>
+			</div>
+		</section>
+		<section id="work-experience" class="work-experience container">
+			<h2>
+				<small>Recent</small>
+				Work Experience
+			</h2>
+			<div class="jobs">
+				<article>
+					<figure>
+						<div>
+							<img src="./imgs/Transcendet.png" alt="Workplace 1 - CT Intern - Application Development" width="100%" />
+							<figcaption>
+								Workplace - 1 CT Intern - Application Development
+							</figcaption>
+						</div>
+					</figure>
+					<h3>ICT Intern</h3>
+					<div>July 2023 - July 2024</div> <!-- Fix date -->
+					<p>Developed and implemented code in languages such as C#, HTML, JavaScript.</p>
+				</article>
+				<article>
+					<figure>
+						<div>
+							<img src="./imgs/tutor-image.jpg" alt="Workplace 2 - Software Development Tutor" width="100%" />
+							<figcaption>
+								Workplace - Tutoring Development Software <!-- Fix typo -->
+							</figcaption>
+						</div>
+					</figure>
+					<h3>Development Software</h3>
+					<div>2022</div>
+					<p>Delivered lessons on computer literacy, programming basics, and software application to first-year students.</p>
+				</article>
+				<article>
+					<figure>
+						<div>
+							<img src="./imgs/Capacit-image.jpg" alt="Workplace 3 - Capaciti" width="100%" />
+							<figcaption>
+								Workplace - Capaciti
+							</figcaption>
+						</div>
+					</figure>
+					<h3>Intern in Software Development</h3>
+					<div>2025 - Current</div>
+					<p>Software development involves designing, building, testing, and maintaining software applications. The responsibilities vary based on the role, but here are the core duties:</p>
+				</article>
+			</div>
+		</section>
+
+
+		<section class="certificates-section">
+			<h3>
+				Certifications
+			</h3><br>
+    <div class="certificate-grid">
+        <article class="certificate-card">
+            <a href="/cert/REALISE%20Certificate.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (54).png" alt="Certificate 1" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong> WORK READINESS PROGRAMME</strong>
+                <p>This program is designed to equip individuals with the essential skills and professional demeanor required to succeed in today's job market.</p>
+            </div>
+        </article>
+        
+        <article class="certificate-card">
+            <a href="/cert/Mictseta%20Certificate.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (55).png" alt="Certificate 2" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>SYSTEMS DEVELOPMENT</strong>
+                <p>This qualification provides a strong foundation in designing, developing, and maintaining software solutions, preparing you for a career as a systems developer or programmer.</p>
+            </div>
+        </article>
+        
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20Z6XWJX9U7FCZ.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (56).png" alt="Certificate 3" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong> Application Development</strong>
+                <p>This program focuses on the principles and practices of building modern software applications for various platforms, including web, desktop, and mobile.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20VPED982B4GER.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (57).png" alt="Certificate 4" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Getting Started with Git and GitHub</strong>
+                <p>This workshop provides a foundational understanding of version control using Git, a powerful tool for tracking changes in code. You'll also learn how to use GitHub for collaborative development, code hosting, and project management.</p>
+            </div>
+        </article>
+        
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20TV53GR4L641V.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (58).png" alt="Certificate 5" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Programming with Java</strong>
+                <p>This course introduces the fundamentals of Java programming, a versatile, object-oriented language used for a wide range of applications, from mobile apps to large-scale enterprise systems. You'll learn core concepts like syntax, data structures, and object-oriented principles.</p>
+            </div>
+        </article>
+        
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20RBMU5PB02LJ0.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (59).png" alt="Certificate 6" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Hands-on Introduction to Linux Commands and
+ Shell Scripting</strong>
+                <p>This course provides practical experience with the Linux command line, teaching essential commands for navigating and managing the file system, and introducing the basics of writing shell scripts to automate tasks.</p>
+            </div>
+        </article>
+        
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20MMIKVKP33XZ4.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (60).png" alt="Certificate 7" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Agentic AI and AI Agents: A Primer for Leaders</strong>
+                <p>This course introduces leaders to the next generation of AI that can act autonomously and make decisions, moving beyond simple data generation to drive automation and innovation within an organization.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <a href="/cert/Coursera%20MDP1PGTE24BY.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (61).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Database Management with Java and SQL</strong>
+                <p>This course teaches how to use Java to connect to and manage databases, including writing SQL queries to store, retrieve, and manipulate data.</p>
+            </div>
+        </article>
+
+		<article class="certificate-card">
+            <a href="/cert/Coursera%20KKR16IVRYTIT.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (62).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Generative AI in Software Development</strong>
+                <p>This course explores how generative AI tools are used to automate tasks, assist in code creation, and accelerate the software development lifecycle.</p>
+            </div>
+        </article>
+
+	    <article class="certificate-card">
+            <a href="/cert/Coursera%20FSUXV6LI3EPU.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (63).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Solving Problems with Creative and Critical
+ Thinking</strong>
+                <p>This course teaches you how to approach complex challenges by using both creative techniques to generate new ideas and critical thinking skills to evaluate and refine them into effective solutions.</p>
+            </div>
+        </article>
+
+	    <article class="certificate-card">
+            <a href="/cert/Coursera%20FK5A0VQH6YK2.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (64).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Advanced React</strong>
+                <p>This course builds on foundational knowledge of React, covering advanced topics like performance optimization, state management, and building custom hooks for complex applications.</p>
+            </div>
+        </article>
+
+		<article class="certificate-card">
+            <a href="/cert/Coursera%20D3NHRTYD1T4K.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (65).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Full Stack Web Development</strong>
+                <p>This program provides comprehensive training in both front-end and back-end technologies, enabling you to build and deploy complete, end-to-end web applications.</p>
+            </div>
+        </article>
+
+		<article class="certificate-card">
+            <a href="/cert/Coursera%2025I6P9HS1ED5.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (66).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>Data Structures and Algorithms</strong>
+                <p>This course teaches fundamental computer science concepts for organizing and managing data (data structures) and for designing efficient steps to solve problems (algorithms).</p>
+            </div>
+        </article>
+
+		<article class="certificate-card">
+            <a href="/cert/Coursera%209C3CZC6B0X8P%20(1).pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (67).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong> Developing Back-End Apps with Node.js and
+ Express</strong>
+                <p>This course teaches you to build server-side applications and APIs using Node.js and the popular Express.js framework.</p>
+            </div>
+        </article>
+
+		<article class="certificate-card">
+            <a href="/cert/Coursera%200OBWDMFO5008.pdf" target="_blank" class="certificate-link">
+                <img src="/cert/Screenshot (68).png" alt="Certificate 8" class="certificate-img">
+            </a>
+            <div class="certificate-info">
+                <strong>AI Agents and Agentic AI with Python & Generative
+ AI</strong>
+                <p>This course teaches you how to build and deploy intelligent AI agents using Python and generative AI models, enabling them to reason, plan, and autonomously perform tasks.</p>
+            </div>
+        </article>
+    </div>
+</section>
+		
+	</main>
+	
+	<script>
+		(function()
+		{
+			if(!window.chatbase || window.chatbase("getState") !== "initialized") 
+			{
+				window.chatbase = (...arguments) => 
+				{
+					if (!window.chatbase.q) 
+					{
+						window.chatbase.q = [];
+					}
+					window.chatbase.q.push(arguments);
+				};
+        
+				window.chatbase = new Proxy(window.chatbase, 
+				{
+					get(target, prop) 
+					{
+						if (prop === "q") 
+						{
+							return target.q;
+						}
+						return (...args) => target(prop, ...args);
+					}
+				});
+			}
+	
+			const onLoad = function () 
+			{
+				const script = document.createElement("script");
+				script.src = "https://www.chatbase.co/embed.min.js";
+				script.id = "ihDOnwrUR2rLF_IPaIwkG";
+				script.domain = "www.chatbase.co";
+				document.body.appendChild(script);
+			};
+    
+			if (document.readyState === "complete") 
+			{
+				onLoad();
+			} 
+	
+			else 
+			{
+				window.addEventListener("load", onLoad);
+			}
+		})();
+	</script>
+
+	<article id="contact-section" class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="title1">
+                <h3 class="box">Contact Me</h3>
+            </div>
+            
+            <h1 class="box">Let's Connect...</h1>
+            <!-- <p class="w-50 text-center mt-n5 box contact_desc">I'm currently a Software Developer at <strong>Johannesburg, South Africa. 💻🚀</strong>
+                <br>Feel free to get in touch and connect with a fellow bro.
+            </p> -->
+
+            <div class="social-container box d-flex justify-content-between align-items-center my-5 ">
+    <a href="http://www.linkedin.com/in/sipo-kupiso-91b035277" target="_blank" class="social-item">
+        <img src="\imgs\linkedin1.png" alt="LinkedIn icon">
+    </a>
+
+    <a href="mailto:kupisosipo@gmail.com" target="_blank" class="social-item">
+        <img src="\imgs\gmail.png" alt="Email icon">
+    </a>
+
+    <a href="tel:+27735610318" target="_blank" class="social-item">
+        <img src="\imgs\phone-call.png" alt="Phone icon">
+    </a>
+</div>
+			<br>
+			
+		<h2>Leave a Comment</h2>
+
+<form id="commentForm">
+    <label for="from_name" class="comment-label">Your Name:</label>
+    <input type="text" id="from_name" name="from_name" placeholder="Your name" required><br>
+
+    <label for="reply_to" class="comment-label">Your Email 📧:</label>
+    <input type="email" id="reply_to" name="reply_to" placeholder="Your email" required><br>
+
+    <label for="comment" class="comment-label">Comment 📝⤵</label>
+    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="What's on your mind?" required></textarea>
+    <br><br>
+
+    <button type="submit" class="send-btn">Send 🚀</button>
+</form>
+        </article>
+
+		<br>
+		<hr style="border: 2px solid black;">
+
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Sipo Kupiso. All rights reserved.</p>
+    <p>Designed with <span class="heart">&hearts;</span> by <a href="" target="_blank" style="font-style: italic;">Sipo Kupiso</a></p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/sipo-kupiso-91b035277" target="_blank" style="color: #fff; margin: 0 10px; font-size: 18px; text-decoration: none;">
+        <img src="/imgs/linkedin1.png" alt="LinkedIn" style="height: 24px; vertical-align: middle;">
+      </a>
+      <a href="https://github.com/kupiso" target="_blank" style="color: #fff; margin: 0 10px; font-size: 18px; text-decoration: none;">
+        <img src="/imgs/github.png" alt="GitHub" style="height: 24px; vertical-align: middle;">
+      </a>
+      <a href="mailto:kupisosipo@gmail.com" target="_blank" style="color: #fff; margin: 0 10px; font-size: 18px; text-decoration: none;">
+        <img src="/imgs/gmail.png" alt="Email" style="height: 24px; vertical-align: middle;">
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+
+    // Get the logo element
+    const logo = document.getElementById('logo-spinner');
+
+    // Set a timer to start the animation after 5000 milliseconds (5 seconds)
+    setTimeout(() => {
+        // Add the 'spin-logo' class to the logo element
+        logo.classList.add('spin-logo');
+    }, 3000);
+
+   
+    // Get both the frontend and backend skill lists
+    const frontendList = document.querySelector('.left-column ul');
+    const backendList = document.querySelector('.left-column ul:last-of-type');
+
+    // Wait for 3 seconds (3000 milliseconds) before starting the animation
+    setTimeout(() => {
+        // Add the 'waving-animation' class to both parent lists
+        frontendList.classList.add('waving-animation');
+        backendList.classList.add('waving-animation');
+    }, 3000);
+
+
+    const dynamicTextElement = document.getElementById('dynamic-text');
+
+    // Array of objects, each containing a phrase and its color
+    const phrases = [
+        { text: "Sipo Kupiso", color: "black" },
+        { text: "A Lecturer", color: "red" },
+        { text: "Software Developer", color: "var(--blue)" }
+    ];
+
+    let phraseIndex = 0;
+
+    function changeText() {
+        // Fade out the text and color
+        dynamicTextElement.style.opacity = '0';
+        
+        setTimeout(() => {
+            const currentPhrase = phrases[phraseIndex];
+            
+            // Update the text and color
+            dynamicTextElement.textContent = currentPhrase.text;
+            dynamicTextElement.style.color = currentPhrase.color;
+
+            // Fade the new text and color in
+            dynamicTextElement.style.opacity = '1';
+
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+        }, 500); // Wait for fade-out to complete
+    }
+
+    // Call the function to set the initial text
+    changeText();
+
+    // Set the interval to change the text every 3 seconds
+    setInterval(changeText, 3000);
+</script>
+    <!-- MAIN SCRIPT -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
